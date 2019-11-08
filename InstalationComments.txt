@@ -1,1 +1,20 @@
+Based on: https://gilberttanner.com/blog/installing-the-tensorflow-object-detection-api
+
 Install tensorflow object detection API
+1. Cloning the "models" repository and installing dependencies
+	1.1 git clone https://github.com/tensorflow/models
+	1.2. Install dependencies if you dont have anaconda installed
+
+2.Install the COCO API
+	2.1 git clone https://github.com/cocodataset/cocoapi.git
+	2.2 Copy "pycocotools" folder in "/models/research" directory
+
+3.Protobuf Installation/Compilation
+	3.1 execute in use_protobuf.py in  models/research
+
+4. Add necessary environment variables and finish 
+Tensorflow Object Detection API installation
+	4.1 go to "/models/research" and execute:
+		python setup.py build
+		python setup.py install
+	4.2 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim 
